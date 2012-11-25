@@ -1,5 +1,7 @@
 <h1>Listing questions</h1>
 
+<p class="info">Nenhuma questao cadastrada</p>
+<% unless @questions.empty? %>
 <table>
   <tr>
     <th>Title</th>
@@ -9,7 +11,6 @@
     <th></th>
     <th></th>
   </tr>
-
 <% @questions.each do |question| %>
   <tr>
     <td><%= question.title %></td>
@@ -21,7 +22,7 @@
   </tr>
 <% end %>
 </table>
-
+<% end %>
 <br />
 
 <%= link_to 'New Question', new_question_path %>
