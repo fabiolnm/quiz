@@ -5,3 +5,5 @@
 require File.expand_path('../config/application', __FILE__)
 
 Quizz::Application.load_tasks
+
+MINITEST_TASKS << "views"
